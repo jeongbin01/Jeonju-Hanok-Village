@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전통과 현대의 조화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button onclick="document.getElementById('background-music').play()">음악 재생</button>
+    <button onclick="document.getElementById('background-music').pause()">음악 정지</button>
+    <audio id="background-music" loop>
+        <source src="MP_느릿한 회전목마.mp3" type="audio/mpeg">
+        <p>이 브라우저는 오디오 요소를 지원하지 않습니다.</p>
+    </audio>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">경기전</a></li>
+                <li><a href="#history">경기전의 역사</a></li>
+                <li><a href="#gallery">한옥의 갤러리</a></li>
+                <li><a href="#visit">경기전의 방문 정보</a></li>
+                <li><a href="#map">한옥마을의 지도</a></li>
+                <li><a href="#quiz">한옥마을 퀴즈</a></li>
+                <li><a href="#events">전주의 이벤트 & 캘린더</a></li>
+                <li><a href="#reviews">방문 후기</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>경기전</h1>
+        <p>전라북도 전주에 위치한 역사적인 장소로, 조선시대의 명당 중 하나로 여겨졌습니다.<br> 경기전은 이곳이 조선 왕조의 16대 왕인 세종대왕의 출생지로 유명하여, 세종대왕을 기리기 위해 세운 전각입니다.</p>
+    </section>
+
+    <section id="history">
+        <h2>경기전의 역사</h2>
+        <p>경기전은 태조 이성계의 어진을 봉안한 곳으로, 조선 왕조의 시작을 상징하는 중요한 역사적 유산입니다.<br>조선 시대의 전통 건축 양식을 간직하고 있으며, 전통과 역사를 동시에 느낄 수 있는 장소입니다.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>한옥의 갤러리</h2>
+        <div class="gallery-container">
+            <img src="images/img_4323.JPG" alt="경기전 전경">
+            <img src="images/IMG_4335.JPG" alt="경기전의 전주사고 (全州史庫)">
+            <img src="images/IMG_4327.JPG" alt="경기전의 조경묘">
+            <img src="images/img_4353.JPG" alt="경기전의 풍경">
+            <img src="images/IMG_4410.JPG" alt="오목대에서 바라본 전주한옥마을 풍경">
+            <img src="images/IMG_4420.JPG" alt="한옥마을의 길거리">
+        </div>
+
+        <!-- 이미지 확대용 모달 -->
+         <div id="imageModal" class="modal">
+            <span id="closeBtn" class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+    </section>
+
+    <section id="visit">
+        <h2>경기전의 방문 정보</h2>
+        <div class="visit-info">
+            <div class="info-item">
+                <h3>운영 시간</h3>
+                <p>3~5월: 오전 9시 - 오후 6시</p>
+                <p>6~8월: 오전 9시 - 오후 7시</p>
+                <p>9~10월: 오전 9시 - 오후 6시</p>
+                <p>11~2월: 오전 9시 - 오후 5시</p>
+            </div>
+            <div class="info-item">
+                <h3>입장료</h3>
+                <table style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr style="background-color: #f2f2f2;">
+                            <th style="border: 1px solid #ddd; padding: 8px;">구분</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">일반</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">전주시민 또는 완주군민</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px;">어른</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">3,000원 (개인), 2,500원 (단체)</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">1,000원 (개인), 800원 (단체)</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px;">청소년·군인</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">2,000원 (개인), 1,500원 (단체)</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">800원 (개인), 600원 (단체)</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px;">어린이</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">1,000원 (개인), 500원 (단체)</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">500원 (개인), 300원 (단체)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>* 매월 마지막주 수요일 '문화가 있는 날' 기념 무료 관람</p>
+                <p>* 매월 4째주 토요일 '전주시 한복의 날' 기념 관람료 50% 할인</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="map">
+        <h2>한옥마을의 지도</h2>
+        <p>한옥마을 주요 명소들을 한눈에 확인할 수 있는 지도를 제공합니다.</p>
+        <div id="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.123456789!2d127.1490!3d35.8144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3b6af12345%3A0xabcdef!2z7J207J207IuQ7J6A7JqA7Jqg6rO87ISx!5e0!3m2!1sko!2skr!4v1234567890!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2>한옥마을 퀴즈</h2>
+        <p>경기전과 한옥마을에 대한 퀴즈에 도전하세요!</p>
+        <form id="quizForm">
+            <div class="quiz-question">
+                <div class="quiz-question">
+                    <p>1. 경기전은 본래 어떤 목적으로 건축되었나요?</p>
+                    <label><input type="radio" name="q4" value="wrong"> 왕의 명복을 기리기 위한 장소</label>
+                    <label><input type="radio" name="q4" value="correct"> 왕의 국가적 정책을 논의하는 회의실</label>
+                    <label><input type="radio" name="q4" value="wrong"> 조선 왕조의 왕위 계승을 위한 신성한 공간</label>
+                </div>
+        
+                <div class="quiz-question">
+                    <p>2. 한옥의 '온돌' 시스템은 어떤 시대부터 사용되었으며, 주요 특징은 무엇인가요?</p>
+                    <label><input type="radio" name="q5" value="correct"> 삼국시대부터 사용되었으며, 바닥을 통해 난방하는 시스템</label>
+                    <label><input type="radio" name="q5" value="wrong"> 고려시대부터 사용되었으며, 벽난로를 이용해 난방하는 시스템</label>
+                    <label><input type="radio" name="q5" value="wrong"> 조선시대부터 사용되었으며, 천장을 이용한 난방 시스템</label>
+                </div>
+        
+                <div class="quiz-question">
+                    <p>3. 경기전 내부에 있는 '전정'은 어떤 기능을 가지고 있었나요?</p>
+                    <label><input type="radio" name="q6" value="wrong"> 왕의 일상적인 업무를 수행하는 장소</label>
+                    <label><input type="radio" name="q6" value="correct"> 왕과 신하들이 중요한 정책을 논의하는 장소</label>
+                    <label><input type="radio" name="q6" value="wrong"> 왕의 왕위 계승식을 거행하는 장소</label>
+                </div>
+        
+                <button type="submit">제출</button>
+        </form>
+        <div id="quizResult"></div>
+    </section>   
+
+    <section id="events">
+        <h2>전주의 이벤트 & 캘린더</h2>
+        <div class="calendar">
+            <div class="calendar-header">
+                <button id="prev-month">&lt;</button>
+                <div id="month-year">2024년 11월</div>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div id="weekdays">
+                <div class="weekday">일</div>
+                <div class="weekday">월</div>
+                <div class="weekday">화</div>
+                <div class="weekday">수</div>
+                <div class="weekday">목</div>
+                <div class="weekday">금</div>
+                <div class="weekday">토</div>
+            </div>
+            <div id="calendar-days"></div>
+        </div>    
+        
+    <!-- 메모 모달 -->
+    <div id="memo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-date">날짜</h2>
+            <textarea id="memo-input" placeholder="메모를 입력하세요"></textarea>
+            <div class="modal-buttons">
+                <button id="save-memo">저장</button>
+                <button id="delete-memo">삭제</button>
+            </div>
+        </div>
+    </div>
+    <p>전주의 맛, 멋, 흥을 담은 다양한 축제들을 모아, 12월 한 달간 선보이는 전주 통합축제입니다.</p>
+    <ul>
+        <li>
+            <strong>2024 (재)전주문화재단 전주한벽문화관 우수작품시리즈VIII - 브랜든 콰르텟</strong>
+            <span>(2024년 12월 07일)</span>
+            <a href="https://jjcf.or.kr/main/inner.php?sMenu=F7000&list=thum&mode=view&no=1006" target="_blank">방문 링크</a>
+        </li>
+        <li>
+            <strong>2024 작당 달빛 버스킹</strong>
+            <span>(2024년 08월 31일 ~ 12월 28일)</span>
+            <a href="https://tour.jeonju.go.kr/index.jeonju?menuCd=DOM_000000102002001000&facSid=RE_0000537" target="_blank">방문 링크</a>
+        </li>
+        <li>
+            <strong>온고 갤러리</strong>
+            <span>(2024년 11월 01일 ~ 12월 31일)</span>
+            <a href="https://tour.jeonju.go.kr/index.jeonju?menuCd=DOM_000000102002001000&facSid=RE_0000533" target="_blank">방문 링크</a>
+        </li>
+    </ul>
+    </section>
+
+    <section id="reviews">
+        <div class="rating-container">
+            <div class="rating-header">
+              <h2>리뷰를 남겨주세요</h2>
+              <p>서비스 이용에 대한 솔직한 평가를 들려주세요</p>
+            </div>
+        
+            <div class="stars">
+              <span class="star" data-value="5">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="1">★</span>
+            </div>
+        
+            <textarea 
+              class="review-text" 
+              placeholder="리뷰를 작성해주세요. 다른 사용자들에게 도움이 될 수 있는 솔직한 의견을 남겨주세요."
+            ></textarea>
+        
+            <button class="submit-btn">리뷰 등록하기</button>
+            
+            <div class="reviews-list">
+              <div class="empty-reviews">
+                첫 번째 리뷰를 작성해보세요!
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 전통과 현대의 조화. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
